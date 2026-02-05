@@ -8,7 +8,7 @@ const IN_MOVERIGHT = 1024
 
 const FL_DUCKING = 2
 
-const MASK_PLAYERSOLID = 33636363 // CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_PLAYERCLIP|CONTENTS_WINDOW|CONTENTS_MONSTER|CONTENTS_GRATE
+const MASK_PLAYERSOLID_LADDER = 81931 // CONTENTS_SOLID|CONTENTS_MOVEABLE|CONTENTS_PLAYERCLIP|CONTENTS_WINDOW|CONTENTS_GRATE
 
 const cl_forwardspeed = 450
 const cl_backspeed = 450
@@ -69,7 +69,7 @@ const LADDER_FOOTSTEP_RIGHT = "Ladder.StepRight"
 	
 	local pm =
 	{
-		mask		= MASK_PLAYERSOLID
+		mask		= MASK_PLAYERSOLID_LADDER
 		hullmin		= vecMins
 		hullmax		= vecMaxs
 		ignore		= self
@@ -228,7 +228,7 @@ const LADDER_FOOTSTEP_RIGHT = "Ladder.StepRight"
 	{
 		start		= vecAbsOrigin
 		end			= vecAbsOrigin + wishdir * (m_bOnLadder ? 10.0 : 2.0)
-		mask		= MASK_PLAYERSOLID
+		mask		= MASK_PLAYERSOLID_LADDER
 		hullmin		= vecMins
 		hullmax		= vecMaxs
 		ignore		= self
